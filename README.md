@@ -7,4 +7,9 @@
   Gatsby minimal starter
 </h1>
 
-## 🚀 Quick start
+## GitHub work flow
+
+
+## Check if i'm up to date with current project
+```git fetch```
+```git status```
