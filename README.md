@@ -17,7 +17,7 @@
 1. ```git commit -a -m 'whatever commit message'```
 2. ```git push origin [current branch name]```
 
-This will commit all changes and create a new branch on the repo, and you can manually merge the GitHub repo on the site
+This will commit all changes and create a new branch on the repo(if it wasnt created already), and you can manually merge the GitHub repo on the site
 ## Check if i'm up to date with current project
 1. ```git fetch```
 2. ```git status```
