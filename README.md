@@ -11,5 +11,5 @@
 
 
 ## Check if i'm up to date with current project
-```git fetch```
-```git status```
+1. ```git fetch```
+2. ```git status```
