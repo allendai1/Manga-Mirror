@@ -4,7 +4,11 @@
   </a>
 </p>
 <h1 align="center">
+<<<<<<< Updated upstream
   Gatsby minimal starter a a a a
+=======
+  Gatsby minimal starter123
+>>>>>>> Stashed changes
 </h1>
 
 ## 🚀 Quick start
