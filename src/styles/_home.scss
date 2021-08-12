@@ -1,0 +1,34 @@
+.home{
+}
+.title-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 200px;
+    span.title{
+        text-align: center;
+        font-size: 4.5rem;
+    }
+    align-items: center;
+    
+}
+input.searchbar{
+    
+
+    border: 0;
+    width: 80%;
+    font-size: 1rem;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-top: 3rem;
+}
+
+.searchbar-toggle{
+    border: 0;
+    background: none;
+    color: var(--default-font-color);
+    font-family: var(--default-font);
+    font-size: 1.75rem;
+    margin-top: 1rem;
+}

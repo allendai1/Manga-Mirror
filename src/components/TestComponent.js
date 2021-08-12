@@ -1,9 +1,9 @@
 import React from 'react'
-import "../styles/test.scss"
+import "../styles/main.scss"
 export default function TestComponent() {
     return (
         <div className="test">
-            THIS IS A TEST COMPONENT on branch1
+            THIS IS A COMPONENT123
         </div>
     )
 }

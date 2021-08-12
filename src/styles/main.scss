@@ -1,0 +1,16 @@
+@import "home";
+@font-face {
+    font-family: "Questrial";
+    src: url("./Questrial.ttf");
+}
+:root{
+    --default: #6283D9;
+    --secondary: #7199FF;
+    --default-font: 'Questrial';
+    --default-font-color: white;
+}
+body{
+    background-color: var(--default);
+    font-family: var(--default-font);
+    color: var(--default-font-color);
+}
