@@ -1,16 +1,23 @@
 @import "home";
 @font-face {
-    font-family: "Questrial";
-    src: url("./Questrial.ttf");
+	font-family: "Questrial";
+	src: url("./Questrial.ttf");
 }
-:root{
-    --default: #6283D9;
-    --secondary: #7199FF;
-    --default-font: 'Questrial';
-    --default-font-color: white;
+:root {
+	--default: #6283d9;
+	--secondary: #7199ff;
+	--default-font: "Questrial";
+	--default-font-color: white;
+
+	&[mode="dark"] {
+		--default: #1E1C1C;
+		--secondary: #565656;
+		--default-font: "Questrial";
+		--default-font-color: white;
+	}
 }
-body{
-    background-color: var(--default);
-    font-family: var(--default-font);
-    color: var(--default-font-color);
+body {
+	background-color: var(--default);
+	font-family: var(--default-font);
+	color: var(--default-font-color);
 }
