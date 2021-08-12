@@ -8,6 +8,12 @@
     --secondary: #7199FF;
     --default-font: 'Questrial';
     --default-font-color: white;
+    &[mode="dark"]{
+        --default: #22252C;
+        --secondary: #565656;
+        --default-font-color: white;
+
+    }
 }
 body{
     background-color: var(--default);
