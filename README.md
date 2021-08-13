@@ -13,6 +13,7 @@
 ## to work on a new feature
 1. ```git branch [new branch name]```
 2. ```git checkout [new branch name]```
+3. or ```git checkout -b [new branch name]
 ## a feature on a branch is complete and ready to be added to main project
 1. ```git commit -a -m 'whatever commit message'```
 2. ```git push origin [current branch name]```
@@ -22,7 +23,7 @@ This will commit all changes and create a new branch on the repo(if it wasnt cre
 1. ```git fetch```
 2. ```git status```
 
-## Update my local project to the update to date project
+## Update my local project to the main project
 1. ```git pull```
 
 ## 
