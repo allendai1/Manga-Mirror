@@ -24,6 +24,7 @@ This will commit all changes and create a new branch on the repo(if it wasnt cre
 ## Check if i'm up to date with current project
 1. ```git fetch```
 2. ```git status```
+3. 
 This will tell you if you are behind/ahead. In which case you need to pull to update your project, or you can push, and submit a pull request to merge your project with the main project
 
 ## Update my local project to the main project
