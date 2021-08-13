@@ -14,6 +14,8 @@
 1. ```git branch [new branch name]```
 2. ```git checkout [new branch name]```
 3. or ```git checkout -b [new branch name]```
+any work you do on a branch will not be shown in the master branch until merge.
+
 ## a feature on a branch is complete and ready to be added to main project
 1. ```git commit -a -m 'whatever commit message'```
 2. ```git push origin [current branch name]```
@@ -22,6 +24,7 @@ This will commit all changes and create a new branch on the repo(if it wasnt cre
 ## Check if i'm up to date with current project
 1. ```git fetch```
 2. ```git status```
+If you are on the main/master branch, this will tell you if you are behind/ahead. In which case you need to pull to update your project, or you can push, and submit a pull request to merge your project with the main project
 
 ## Update my local project to the main project
 1. ```git pull origin master```
