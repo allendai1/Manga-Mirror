@@ -24,6 +24,6 @@ This will commit all changes and create a new branch on the repo(if it wasnt cre
 2. ```git status```
 
 ## Update my local project to the main project
-1. ```git pull```
-
+1. ```git pull origin master```
+or ```git pull```
 ## 
