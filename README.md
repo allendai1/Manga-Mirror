@@ -13,7 +13,7 @@
 ## to work on a new feature
 1. ```git branch [new branch name]```
 2. ```git checkout [new branch name]```
-3. or ```git checkout -b [new branch name]
+3. or ```git checkout -b [new branch name]```
 ## a feature on a branch is complete and ready to be added to main project
 1. ```git commit -a -m 'whatever commit message'```
 2. ```git push origin [current branch name]```
