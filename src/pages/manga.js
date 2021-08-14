@@ -28,7 +28,6 @@ const MangaInfoComponent = (props) => {
             x.json().then(data=>{
                 let filename = data.results[0].data.attributes.fileName
                 setImageUrl(`https://uploads.mangadex.org/covers/${props.manga_id}/${filename}`)
-                console.log(`https://uploads.mangadex.org/covers/${props.manga_id}/${filename}`)
             })
             console.log(data)
 		});

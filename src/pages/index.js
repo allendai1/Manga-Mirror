@@ -1,6 +1,6 @@
 import React from "react";
-import { Router } from "@reach/router";
 import SearchBar from "../components/SearchBar";
+
 export default function index() {
 	return (
 		<div className="home">
