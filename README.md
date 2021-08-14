@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter123 hey
+  Gatsby minimal starter
 </h1>
 
 ## GitHub work flow
