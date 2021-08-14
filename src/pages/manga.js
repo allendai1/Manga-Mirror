@@ -48,7 +48,7 @@ const MangaInfoComponent = (props) => {
 			<div>manga description: {mangaInfo.description}</div>
             <br/>
 			<div>manga status: {mangaInfo.status}</div>
-            <img src={imageUrl} width='500' height='500'>
+            <img src={imageUrl} width="400">
 
             </img>
 		</div>
