@@ -1,8 +1,15 @@
-import React from 'react'
+import React from "react";
 import { Router } from "@reach/router";
-import Home from './home';
+import SearchBar from "../components/SearchBar";
 export default function index() {
 	return (
-		<div>index.js</div>
-	)
+		<div className="home">
+			<div className="title-container">
+				<span className="title">Manga</span>
+				<span className="title">Mirror</span>
+				<SearchBar />
+				{/* <button onClick={darkMode}>Dark mode</button> */}
+			</div>
+		</div>
+	);
 }
