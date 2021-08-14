@@ -30,4 +30,5 @@ This will tell you if you are behind/ahead. In which case you need to pull to up
 ## Update my local project to the main project
 1. ```git pull origin master```
 or ```git pull```
-## 
+## Go back to previous commit
+1. ```git restore [filename]```
