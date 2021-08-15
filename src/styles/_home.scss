@@ -1,3 +1,9 @@
+.home{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 .title-container {
 	display: flex;
 	flex-direction: column;
@@ -11,11 +17,13 @@
 .manga-mirror-title {
 	display: flex;
 	flex-direction: column;
+
 }
 .searchbar-group {
 	display: flex;
 	flex-direction: column;
 	width: 85%;
+	margin-top: 1rem;
 }
 input.searchbar {
 	border: 0;
@@ -35,6 +43,7 @@ input.searchbar {
 	color: var(--default-font-color);
 	font-family: var(--default-font);
 	font-size: 1.75rem;
+	margin-top: 1rem;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -47,6 +56,9 @@ input.searchbar {
 	.title-container {
 		flex-direction: row;
 		justify-content: center;
+	}
+	.manga-mirror-title{
+		margin-right: 2rem;
 	}
 	.searchbar-group {
 		position: relative;
@@ -63,6 +75,7 @@ input.searchbar {
 		z-index: 3;
 		padding: 0;
 		padding-right: 1rem;
+		margin-top: 0;
 		&::before {
 			content: "";
 			width: 100%;
