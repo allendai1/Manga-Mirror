@@ -1,24 +1,32 @@
-
 .title-container {
 	display: flex;
 	flex-direction: column;
 	color: white;
-	margin-top: 200px;
 	span.title {
 		text-align: center;
 		font-size: clamp(3rem, calc(3.5rem + ((1vw - 0.1875rem) * 0.9877)), 4.5rem);
 	}
 	align-items: center;
 }
+.manga-mirror-title {
+	display: flex;
+	flex-direction: column;
+}
+.searchbar-group {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+}
 input.searchbar {
 	border: 0;
-	width: 80%;
-    max-width: 500px;
+	// width: 100
+	// text-align: center;
+	// max-width: 780px;
 	font-size: 1rem;
 	border-radius: 15px;
 	padding: 1rem 1rem;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-	margin-top: 3rem;
+	// margin-top: 3rem;
 }
 
 .searchbar-toggle {
@@ -27,5 +35,42 @@ input.searchbar {
 	color: var(--default-font-color);
 	font-family: var(--default-font);
 	font-size: 1.75rem;
-	margin-top: 1rem;
+}
+
+@media only screen and (min-width: 1000px) {
+	.home {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.title-container {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.searchbar-group {
+		position: relative;
+		justify-content: center;
+		max-width: 780px;
+	}
+	input.searchbar {
+		position: relative;
+	}
+	.searchbar-toggle {
+		position: absolute;
+		right: 0;
+		color: black;
+		z-index: 3;
+		padding: 0;
+		padding-right: 1rem;
+		&::before {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			display: block;
+			position: absolute;
+			z-index: -1;
+		}
+	}
 }

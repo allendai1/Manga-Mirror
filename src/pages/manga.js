@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/main.scss";
 import SearchBar from "../components/SearchBar";
 import { Router, Link } from "@reach/router";
@@ -9,47 +9,77 @@ import TestComponent from "../components/TestComponent";
  */
 const MangaInfoComponent = (props) => {
 	const [mangaInfo, setMangaInfo] = useState({});
-    const [imageUrl,setImageUrl] = useState(null);
+	const [imageUrl, setImageUrl] = useState(null);
 
-    useEffect(async()=>{
-        let promi =  fetch(`https://api.mangadex.org/manga/${props.manga_id}`, {
-		method: "GET",
-	});
-    promi.then((res) => {
-		console.log(`https://api.mangadex.org/manga/${props.manga_id}`);
-		res.json().then(async (data) => {
-			let info = {
-				title: data.data.attributes.title.en,
-				status: data.data.attributes.status,
-				description: data.data.attributes.description.en,
-			};
-            let x =await fetch(`https://api.mangadex.org/cover?manga[]=${props.manga_id}&limit=1`)
-			setMangaInfo(info);
-            x.json().then(data=>{
-                let filename = data.results[0].data.attributes.fileName
-                setImageUrl(`https://uploads.mangadex.org/covers/${props.manga_id}/${filename}`)
-            })
-            console.log(data)
+	useEffect(async () => {
+		let promi = fetch(`https://api.mangadex.org/manga/${props.manga_id}`, {
+			method: "GET",
 		});
-	});
+		promi.then((res) => {
+			console.log(`https://api.mangadex.org/manga/${props.manga_id}`);
+			res.json().then(async (data) => {
+				let title = "";
+				if (data.data.attributes.title.jp != undefined) {
+					title = data.data.attributes.title.jp;
+				} else {
+					title = data.data.attributes.title.en;
+				}
 
-    },[])
+				let author = await fetch(
+					`https://api.mangadex.org/author/${data.relationships[0].id}`
+				);
+				author = await author.json();
 
-	
-	
+				let status = data.data.attributes.status;
+
+				let info = {
+					title: title,
+					author: author.data.attributes.name,
+					status: status.charAt(0).toUpperCase() + status.substring(1),
+				};
+				setMangaInfo(info);
+
+				let x = await fetch(
+					`https://api.mangadex.org/cover?manga[]=${props.manga_id}&limit=1`
+				);
+				x.json().then((data) => {
+					let filename = data.results[0].data.attributes.fileName;
+					setImageUrl(
+						`https://uploads.mangadex.org/covers/${props.manga_id}/${filename}`
+					);
+				});
+				console.log(data);
+			});
+		});
+	}, []);
 
 	return (
-		<div>
-			<div>manga id : {props.manga_id}</div>
-            <br/>
-			<div>manga name : {mangaInfo.title}</div>
-            <br/>
-			<div>manga description: {mangaInfo.description}</div>
-            <br/>
-			<div>manga status: {mangaInfo.status}</div>
-            <img src={imageUrl} width="400">
-
-            </img>
+		<div className = "manga_page_container">
+			<div className = "manga_info_container">
+				<img src={imageUrl} width="300"></img>
+					<div className="manga_title">
+						{mangaInfo.title}
+						<div className="label">
+							Author: {mangaInfo.author}
+							<br/>
+							Status: {mangaInfo.status}
+						</div>
+					</div>
+			</div>
+			<div className = "stack_container">
+				<div className = "stack">
+					<div className= "label" > Chapters </div>
+						Chapter 99
+						<br/>
+						Chapter 98
+				</div>
+				<div className = "stack">
+					<div className = "label"> Groups </div>
+						Penguin Scans
+						<br/>
+						Cow Scans
+				</div>
+			</div>
 		</div>
 	);
 };

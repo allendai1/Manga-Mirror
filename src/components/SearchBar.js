@@ -16,9 +16,9 @@ export default function SearchBar() {
 
     }
 	return (
-		<>
+		<div className="searchbar-group">
 			<input className="searchbar" placeholder={search_msg}></input>
 			<button className="searchbar-toggle" onClick={toggle}>{toggle_button_msg}</button>
-		</>
+		</div>
 	);
 }
