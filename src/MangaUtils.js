@@ -118,9 +118,18 @@ function getMangaPanels(chapter_id) {
 	});
 }
 
+function getFileName(id){
+		return axios.get(`https://api.mangadex.org/cover?manga[]=${id}&limit=1`).then(result=>{
+			let cover_art_name = result.data.results[0].data.attributes.fileName
+			let filename = `https://uploads.mangadex.org/covers/${id}/${cover_art_name}`
+			return filename;
+		})
+}
+
 module.exports = {
 	getMangaPanels,
 	getChapters,
 	getChaptersHelper,
 	getMangaSearchResults,
+	getFileName
 };

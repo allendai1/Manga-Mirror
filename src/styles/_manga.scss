@@ -1,45 +1,117 @@
-.manga_page_container {
+.manga {
 	display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
 .manga_info_container {
     display: flex;
-    justify-content: center;
     flex-direction: row;
-    align-items: center;
+	align-items: center;
+	margin-top: 2rem;
 }
 
 .manga_title {
 	display: flex;
-	flex-direction: column;
 	color: white;
-	text-align: center;
+	flex-direction: column;
+	text-align: left;
 	align-items: left;
-	margin-left: 50px;
-	font-size: 3rem;
+	margin-top: 1rem;
+	margin-left: 2rem;
+	font-size: 1.5rem;
 }
 
-.label {
+.additional_info {
 	display: flex;
 	color: white;
 	text-align: left;
-	margin-top: 50px;
-	font-size: 2rem;
+	margin-top: 0.5rem;
+	margin-left: 0.5rem;
+	font-size: 1rem;
 }
 
 .stack_container {
 	display: flex;
     flex-direction: row;
 	align-items: left;
+	margin-left: 1.5rem;
 }
 
-.stack {
+.chapters {
 	display: flex;
-	justify-content: left;
     flex-direction: column;
 	align-items: left;
-	margin-right: 380px;
+	margin-right: 10rem;
+	margin-left: 2rem;
+}
+
+.groups {
+	display: flex;
+    flex-direction: column;
+	align-items: left;
+	margin-right: 10rem;
+	margin-left: 2rem;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+	.manga {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.manga_info_container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 2rem;
+	}
+
+	.manga_title {
+		display: flex;
+		color: white;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		margin-top: 1rem;
+		margin-left: 0rem;
+		font-size: 1.5rem;
+	}
+	
+	.additional_info {
+		display: flex;
+		color: white;
+		text-align: left;
+		margin-top: 0.5rem;
+		margin-left: 0rem;
+		font-size: 1rem;
+	}
+
+	.stack_container {
+		display: flex;
+		flex-direction: center;
+		align-items: left;
+		margin-left: 0rem;
+	}
+	
+	.chapters {
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		margin-top: 2rem;
+		margin-right: 0rem;
+		margin-left: 0rem;
+	}
+	
+	.groups {
+		display: none;
+	}
 }

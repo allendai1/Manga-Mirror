@@ -54,30 +54,21 @@ const MangaInfoComponent = (props) => {
 	}, []);
 
 	return (
-		<div className = "manga_page_container">
+		<div className = "manga">
 			<div className = "manga_info_container">
-				<img src={imageUrl} width="300"></img>
-					<div className="manga_title">
-						{mangaInfo.title}
-						<div className="label">
-							Author: {mangaInfo.author}
-							<br/>
-							Status: {mangaInfo.status}
-						</div>
-					</div>
+				<img src={imageUrl} width="250"></img>
+				<div className="manga_title">
+					{mangaInfo.title}
+					<div className = "additional_info"> Author: {mangaInfo.author} </div>
+					<div className = "additional_info"> Status: {mangaInfo.status} </div>
+				</div>
 			</div>
 			<div className = "stack_container">
-				<div className = "stack">
-					<div className= "label" > Chapters </div>
-						Chapter 99
-						<br/>
-						Chapter 98
+				<div className = "chapters">
+					<div className= "manga_title" > Chapters </div>
 				</div>
-				<div className = "stack">
-					<div className = "label"> Groups </div>
-						Penguin Scans
-						<br/>
-						Cow Scans
+				<div className = "groups">
+					<div className = "manga_title"> Groups </div>
 				</div>
 			</div>
 		</div>
